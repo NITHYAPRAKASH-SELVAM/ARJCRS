@@ -18,7 +18,7 @@ mongoose
   .catch(error => console.log(error));
 
 const app = express();
-const appUrl = 'https://arjcrs-two.vercel.app';
+const appUrl = 'https://arjcrs-two.vercel.app/';
 
 app.use(helmet());
 app.use(logger('dev'));

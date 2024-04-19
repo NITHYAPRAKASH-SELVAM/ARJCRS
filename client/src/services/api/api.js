@@ -1,5 +1,5 @@
 //API.JS
-const axios = require('axios');
+import axios from 'axios';
 
 class API {
   constructor() {
@@ -82,4 +82,4 @@ class API {
     });
 }
 
-module.exports = API;
+export default API;
