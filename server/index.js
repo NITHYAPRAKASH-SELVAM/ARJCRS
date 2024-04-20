@@ -19,11 +19,11 @@ let server = http.createServer(app);
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json());
 app.use(cors(
-     {
-        origin: [appUrl],
-        methods: ["post", "GET","PUT","DELETE","PATCH"],
-        credentials: true
-    }
+    //  {
+    //     origin: [appUrl],
+    //     methods: ["post", "GET","PUT","DELETE","PATCH"],
+    //     credentials: true
+    // }
 ));
 app.use(morgan('dev'))
 app.use('/api/user', authRouter);
