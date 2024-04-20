@@ -3,7 +3,8 @@ import axios from 'axios';
 
 class API {
   constructor() {
-    axios.defaults.baseURL = 'https://arjcrs-api.vercel.app';
+    axios.defaults.baseURL = 'https://arjcrs-two.vercel.app';
+    // axios.defaults.baseURL = 'http://localhost:5000';
     axios.defaults.headers.post['Content-Type'] = 'application/json';
   }
 
