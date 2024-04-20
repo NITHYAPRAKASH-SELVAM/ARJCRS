@@ -13,17 +13,18 @@ const jobsRouter = require('./src/routes/api/jobs');
 const profileRouter = require('./src/routes/api/profile');
 
 let appUrl = 'https://arjcrs-two.vercel.app';
+// let appUrl = 'http://localhost:3000';
 //MIDDILWARES
 const app = express();
 let server = http.createServer(app);
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json());
 app.use(cors(
-    //  {
-    //     origin: [appUrl],
-    //     methods: ["post", "GET","PUT","DELETE","PATCH"],
-    //     credentials: true
-    // }
+     {
+        origin: [appUrl],
+        methods: ["POST", "GET","PUT","DELETE","PATCH"],
+        credentials: true
+    }
 ));
 app.use(morgan('dev'))
 app.use('/api/user', authRouter);
